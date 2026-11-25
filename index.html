@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ndeye Astou Kounta | Développeuse Logiciel</title>
+  <meta name="description" content="Portfolio de Ndeye Astou Kounta, développeuse logiciel.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1120;
+      color: #f1f5f9;
+      line-height: 1.7;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,17,32,0.95);
+      border-bottom: 1px solid #263248;
+      padding: 15px 6%;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      color: #60a5fa;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .container {
+      width: 88%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .hero {
+      padding: 100px 0;
+      background: radial-gradient(circle at top right, #1e3a5f, #0b1120 60%);
+    }
+
+    .hero h1 {
+      font-size: 43px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      max-width: 700px;
+      margin-bottom: 25px;
+    }
+
+    .subtitle {
+      color: #60a5fa;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin: 8px 8px 8px 0;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #60a5fa;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .section-text {
+      color: #cbd5e1;
+      max-width: 850px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111c30;
+      padding: 25px;
+      border: 1px solid #263248;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #60a5fa;
+    }
+
+    .card h3 {
+      color: #60a5fa;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #1e3a5f;
+      color: #bfdbfe;
+      padding: 5px 10px;
+      margin: 5px 3px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .project-links {
+      margin-top: 15px;
+    }
+
+    .project-links a {
+      color: #93c5fd;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    .contact {
+      text-align: center;
+      background: #111c30;
+      border-top: 1px solid #263248;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+      border-top: 1px solid #263248;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 5px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">AK.dev</div>
+    <div>
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="accueil">
+  <div class="container">
+    <p class="subtitle">DÉVELOPPEUSE LOGICIEL</p>
+    <h1>Bonjour, je suis <span>Ndeye Astou Kounta</span></h1>
+
+    <p>
+      Passionnée par le développement informatique, la conception
+      de solutions numériques et l'innovation, je développe des
+      applications web et mobiles répondant à des besoins concrets.
+    </p>
+
+    <a href="#projets" class="btn">Découvrir mes projets</a>
+    <a href="https://www.linkedin.com/in/ndeye-astou-kounta-0ba923328"
+       target="_blank" class="btn btn-outline">LinkedIn</a>
+  </div>
+</section>
+
+<section id="apropos">
+  <div class="container">
+    <h2>À propos de moi</h2>
+
+    <p class="section-text">
+      Titulaire d'une Licence en Génie Logiciel, je m'intéresse
+      au développement web, au développement mobile, à la gestion
+      des bases de données et aux nouvelles technologies.
+      J'aime concevoir, développer et améliorer des applications
+      qui facilitent le quotidien des utilisateurs.
+      <br><br>
+      Je souhaite approfondir mes connaissances en intelligence
+      artificielle, machine learning et analyse de données, tout en
+      développant mes compétences au sein d'une équipe professionnelle.
+    </p>
+  </div>
+</section>
+
+<section id="competences">
+  <div class="container">
+    <h2>Mes compétences</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Développement web</h3>
+        <span class="tag">PHP</span>
+        <span class="tag">Laravel</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+      </div>
+
+      <div class="card">
+        <h3>Développement mobile</h3>
+        <span class="tag">Flutter</span>
+        <span class="tag">Dart</span>
+        <span class="tag">Java</span>
+        <span class="tag">Android</span>
+      </div>
+
+      <div class="card">
+        <h3>Programmation</h3>
+        <span class="tag">Python</span>
+        <span class="tag">C#</span>
+        <span class="tag">Java</span>
+      </div>
+
+      <div class="card">
+        <h3>Bases de données</h3>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Oracle</span>
+        <span class="tag">Doctrine</span>
+        <span class="tag">Eloquent</span>
+      </div>
+
+      <div class="card">
+        <h3>Outils & méthodes</h3>
+        <span class="tag">Git</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Figma</span>
+        <span class="tag">UML</span>
+        <span class="tag">Merise</span>
+      </div>
+
+      <div class="card">
+        <h3>Environnement</h3>
+        <span class="tag">Linux</span>
+        <span class="tag">Windows</span>
+        <span class="tag">Postman</span>
+        <span class="tag">XAMPP</span>
+        <span class="tag">Laragon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projets">
+  <div class="container">
+    <h2>Mes projets</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>ISI-Food</h3>
+        <p>
+          Conception et réalisation d'un système de gestion
+          des commandes et livraisons. Application destinée
+          à faciliter la gestion des commandes, des clients,
+          des paiements et des livraisons.
+        </p>
+
+        <span class="tag">Laravel</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Gestion</span>
+
+        <div class="project-links">
+          <a href="https://github.com/Kounta15/isi-food-backend"
+             target="_blank">Voir sur GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Gestion de rendez-vous</h3>
+        <p>
+          Application desktop développée pour organiser,
+          enregistrer et gérer les rendez-vous et les informations
+          des clients.
+        </p>
+
+        <span class="tag">C#</span>
+        <span class="tag">Programmation orientée objet</span>
+        <span class="tag">Base de données</span>
+      </div>
+
+      <div class="card">
+        <h3>Application de gestion universitaire</h3>
+        <p>
+          Projet de gestion universitaire permettant de structurer
+          les informations des étudiants et des cours dans
+          une application.
+        </p>
+
+        <span class="tag">PHP</span>
+        <span class="tag">MVC</span>
+        <span class="tag">PDO</span>
+      </div>
+
+      <div class="card">
+        <h3>Application de gestion de ferme</h3>
+        <p>
+          Projet de gestion des animaux et des équipements
+          à travers une application organisée autour
+          de la gestion des données.
+        </p>
+
+        <span class="tag">PHP</span>
+        <span class="tag">Doctrine ORM</span>
+        <span class="tag">Twig</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Me contacter</h2>
+
+    <p>
+      Vous souhaitez échanger sur un projet, une opportunité
+      professionnelle ou une collaboration ?
+    </p>
+
+    <a href="https://www.linkedin.com/in/ndeye-astou-kounta-0ba923328"
+       target="_blank" class="btn">Me contacter sur LinkedIn</a>
+
+    <a href="https://github.com/Kounta15"
+       target="_blank" class="btn btn-outline">Mon GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ndeye Astou Kounta | Portfolio professionnel</p>
+</footer>
+
+</body>
+</html>
