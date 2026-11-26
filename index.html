@@ -170,8 +170,70 @@
     }
 
     .project-links a:hover {
-      text-decoration: underline;
-    }
+      text-decoration: .project-card {
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #263248;
+  margin-bottom: 18px;
+  background: #0b1120;
+}
+
+.project-card h3 {
+  font-size: 21px;
+}
+
+.project-description {
+  margin-bottom: 12px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+}
+
+.project-links a:hover {
+  background: #1e3a5f;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 15px 4%;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 4px 7px;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+}
 
     .contact {
       text-align: center;
@@ -241,6 +303,11 @@
     <a href="#projets" class="btn">Découvrir mes projets</a>
     <a href="https://www.linkedin.com/in/ndeye-astou-kounta-0ba923328"
        target="_blank" class="btn btn-outline">LinkedIn</a>
+    <a href="documents/CV_Ndeye_Astou_Kounta.pdf"
+      class="btn btn-outline"
+      download>
+      Télécharger mon CV
+</a>
   </div>
 </section>
 
@@ -248,17 +315,45 @@
   <div class="container">
     <h2>À propos de moi</h2>
 
-    <p class="section-text">
-      Titulaire d'une Licence en Génie Logiciel, je m'intéresse
-      au développement web, au développement mobile, à la gestion
-      des bases de données et aux nouvelles technologies.
-      J'aime concevoir, développer et améliorer des applications
-      qui facilitent le quotidien des utilisateurs.
-      <br><br>
-      Je souhaite approfondir mes connaissances en intelligence
-      artificielle, machine learning et analyse de données, tout en
-      développant mes compétences au sein d'une équipe professionnelle.
-    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Mon parcours</h3>
+        <p>
+          Titulaire d'une Licence en Génie Logiciel, je suis
+          passionnée par la conception et le développement
+          de solutions numériques. J'aime transformer les idées
+          en applications utiles, modernes et adaptées aux
+          besoins des utilisateurs.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Mes objectifs</h3>
+        <p>
+          Je souhaite approfondir mes compétences en
+          développement web et mobile, en intelligence
+          artificielle, machine learning et analyse de données,
+          tout en contribuant à des projets innovants.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Ma vision</h3>
+        <p>
+          Continuer à apprendre, relever de nouveaux défis
+          techniques et participer à la création de solutions
+          technologiques qui répondent à des besoins concrets.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top:25px;">
+      <a href="documents/CV_Ndeye_Astou_Kounta.pdf"
+         class="btn"
+         download>
+         Télécharger mon CV
+      </a>
+    </div>
   </div>
 </section>
 
@@ -326,16 +421,26 @@
 <section id="projets">
   <div class="container">
     <h2>Mes projets</h2>
+    <p class="section-text" style="margin-bottom:25px;">
+      Découvrez quelques projets réalisés dans le cadre de
+      mon parcours en Génie Logiciel et de mes expériences
+      de développement.
+    </p>
 
     <div class="grid">
 
-      <div class="card">
+      <!-- ISI-Food -->
+      <div class="card project-card">
+        <img src="images/isi-food.png"
+             alt="Capture d'écran du projet ISI-Food"
+             class="project-image">
+
         <h3>ISI-Food</h3>
-        <p>
+        <p class="project-description">
           Conception et réalisation d'un système de gestion
-          des commandes et livraisons. Application destinée
-          à faciliter la gestion des commandes, des clients,
-          des paiements et des livraisons.
+          des commandes et livraisons. L'application permet
+          de gérer les commandes, les clients, les paiements
+          et les livraisons.
         </p>
 
         <span class="tag">Laravel</span>
@@ -344,29 +449,39 @@
 
         <div class="project-links">
           <a href="https://github.com/Kounta15/isi-food-backend"
-             target="_blank">Voir sur GitHub ↗</a>
+             target="_blank">Backend GitHub ↗</a>
         </div>
       </div>
 
-      <div class="card">
+      <!-- Gestion de rendez-vous -->
+      <div class="card project-card">
+        <img src="images/rendez-vous.png"
+             alt="Capture d'écran de gestion de rendez-vous"
+             class="project-image">
+
         <h3>Gestion de rendez-vous</h3>
-        <p>
-          Application desktop développée pour organiser,
-          enregistrer et gérer les rendez-vous et les informations
-          des clients.
+        <p class="project-description">
+          Application desktop permettant d'organiser les rendez-vous,
+          d'enregistrer les clients et de gérer les informations
+          associées aux rendez-vous.
         </p>
 
         <span class="tag">C#</span>
-        <span class="tag">Programmation orientée objet</span>
+        <span class="tag">POO</span>
         <span class="tag">Base de données</span>
       </div>
 
-      <div class="card">
-        <h3>Application de gestion universitaire</h3>
-        <p>
-          Projet de gestion universitaire permettant de structurer
-          les informations des étudiants et des cours dans
-          une application.
+      <!-- Gestion universitaire -->
+      <div class="card project-card">
+        <img src="images/gestion-universitaire.png"
+             alt="Capture d'écran du projet universitaire"
+             class="project-image">
+
+        <h3>Gestion universitaire</h3>
+        <p class="project-description">
+          Application développée selon l'architecture MVC
+          pour organiser et gérer les données des étudiants
+          et des cours.
         </p>
 
         <span class="tag">PHP</span>
@@ -374,12 +489,17 @@
         <span class="tag">PDO</span>
       </div>
 
-      <div class="card">
-        <h3>Application de gestion de ferme</h3>
-        <p>
-          Projet de gestion des animaux et des équipements
-          à travers une application organisée autour
-          de la gestion des données.
+      <!-- Gestion de ferme -->
+      <div class="card project-card">
+        <img src="images/gestion-ferme.png"
+             alt="Capture d'écran du projet de gestion de ferme"
+             class="project-image">
+
+        <h3>Gestion de ferme</h3>
+        <p class="project-description">
+          Application de gestion des animaux et des équipements,
+          organisée autour de la structuration et de la gestion
+          des données.
         </p>
 
         <span class="tag">PHP</span>
@@ -394,17 +514,39 @@
 <section id="contact" class="contact">
   <div class="container">
     <h2>Me contacter</h2>
-
     <p>
       Vous souhaitez échanger sur un projet, une opportunité
       professionnelle ou une collaboration ?
     </p>
-
-    <a href="https://www.linkedin.com/in/ndeye-astou-kounta-0ba923328"
-       target="_blank" class="btn">Me contacter sur LinkedIn</a>
-
+    <a href="mailto:kountandeyeastou56@gmail.com"
+       class="btn">
+       M'envoyer un e-mail
+    </a>
+    <a href="tel:+221783059806"
+       class="btn btn-outline">
+       Me contacter par téléphone
+    </a>
+    <a href="https://wa.me/221783059806"
+       target="_blank"
+       class="btn btn-outline">
+       WhatsApp
+    </a>
     <a href="https://github.com/Kounta15"
-       target="_blank" class="btn btn-outline">Mon GitHub</a>
+       target="_blank"
+       class="btn btn-outline">
+       Mon GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/ndeye-astou-kounta-0ba923328"
+       target="_blank"
+       class="btn btn-outline">
+       LinkedIn
+    </a>
+    <p style="margin-top:20px;">
+      <strong>Email :</strong> kountandeyeastou56@gmail.com
+    </p>
+    <p>
+      <strong>Téléphone :</strong> +221 78 305 98 06
+    </p>
   </div>
 </section>
 
